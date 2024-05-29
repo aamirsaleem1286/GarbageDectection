@@ -15,9 +15,9 @@ export async function POST(request: NextRequest) {
         const user = await User.findOne({ email: email });
         if (!user) return NextResponse.json({ error: "No user found" }, { status: HTTP_STATUS.BAD_REQUEST });
 
-        // Removed email sending functionality
+        // Email sending functionality removed
 
-        return NextResponse.json({ message: "Reset Password Email Sent.", success: true });
+        return NextResponse.json({ message: "User found. Email sending functionality removed.", success: true });
     } catch (error: unknown) {
         const Error = error as Error;
         return NextResponse.json({ error: Error.message }, { status: HTTP_STATUS.INTERNAL_SERVER_ERROR });
