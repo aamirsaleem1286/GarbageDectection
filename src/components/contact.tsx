@@ -69,7 +69,7 @@
 
 import React, { useRef, useState } from "react";
 import { ScaleLoader } from "react-spinners";
- import emailjs from "@emailjs/browser";
+//  import emailjs from "@emailjs/browser";
 import { MailPlus } from "lucide-react";
 
 import Toast from "@/utils/toast";
