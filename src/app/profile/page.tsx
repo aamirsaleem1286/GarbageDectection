@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Chart, registerables } from "chart.js";
 import { useRouter } from "next/navigation";
-
+import { BiMessageRoundedError } from "react-icons/bi";
 import SpinLoading from "@/components/loading/SpinLoading";
 import { Error } from "@/types/ErrorTypes";
 import Toast from "@/utils/toast";
@@ -150,10 +150,10 @@ const Page = () => {
                                     <div className=" h-16 w-[3px] bg-black/40"></div>
                                     <div className="flex flex-col justify-center items-center p-2">
                                         <div className="border-2 rounded-full p-4">
-                                            <Recycle size={32} />
+                                           <BiMessageRoundedError  size={32} />
                                         </div>
                                         <span className=" font-semibold uppercase text-lg">{user?.userData?.wasteDumped?.length || "0"}</span>
-                                        <span className="  uppercase text-xs opacity-70 font-semibold tracking-wider">Recycled</span>
+                                        <span className="  uppercase text-xs opacity-70 font-semibold tracking-wider">Dedected</span>
                                     </div>
                                 </div>
                             </div>
