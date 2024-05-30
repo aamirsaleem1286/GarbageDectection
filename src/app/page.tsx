@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Bell, CircleCheck, CircleX, Cloud, History, Landmark, Recycle, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
+import { BiMessageRoundedError } from "react-icons/bi";
 import metal from "@/assets/aluminium.jpg";
 import bottle from "@/assets/bottle.jpg";
 import glass from "@/assets/glass.jpg";
@@ -156,10 +156,10 @@ const Page = () => {
 
                                     <div className="flex flex-col justify-center items-center">
                                         <div className="border-2 rounded-full p-1">
-                                            <Recycle size={32} />
+                                            <BiMessageRoundedError size={32} />
                                         </div>
                                         <span className=" font-semibold uppercase text-lg">{user?.userData?.wasteDumped?.length}</span>
-                                        <span className="  uppercase text-xs opacity-70 font-semibold tracking-wider">Recycled</span>
+                                        <span className="  uppercase text-xs opacity-70 font-semibold tracking-wider">Dedected</span>
                                     </div>
                                 </div>
                             </div>
